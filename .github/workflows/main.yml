@@ -1,6 +1,10 @@
 name: Tests
 
-on: [push, pull_request]
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main, dev ]
 
 jobs:
   test:
@@ -9,7 +13,7 @@ jobs:
       fail-fast: true
       matrix:
         os: [ubuntu-latest]
-        php: [7.4]
+        php: [8.0]
         laravel: [8.*]
         stability: [prefer-stable]
         include:
@@ -43,13 +47,22 @@ jobs:
           composer update --${{ matrix.stability }} --prefer-dist --no-interaction
 
       - name: Install NPM Dependencies
-        run: npm install
+        run: yarn install
 
       - name: Compile Assets
-        run: npm run production
+        run: yarn run production
 
       - name: Generate Key
         run: php artisan key:generate
+
+      - name: PHP-CS-Fixer
+        run: vendor/bin/php-cs-fixer fix --verbose --diff --dry-run --stop-on-violation --using-cache=no
+
+      - name: PHPStan
+        run: vendor/bin/phpstan analyse --configuration=phpstan.neon.dist --memory-limit=512M
+
+      - name: PHPInsights
+        run: vendor/bin/phpinsights --no-interaction --min-quality=90 --min-complexity=80 --min-architecture=85 --min-style=95
 
       - name: Execute tests
         run: vendor/bin/phpunit

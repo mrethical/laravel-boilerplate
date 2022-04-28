@@ -32,7 +32,8 @@ class UpdateUserRequest extends FormRequest
         return [
             'type' => [Rule::requiredIf(function () {
                 return ! $this->user->isMasterAdmin();
-            }), Rule::in([User::TYPE_ADMIN, User::TYPE_USER])],
+            }), Rule::in([User::TYPE_ADMIN, User::TYPE_USER]),
+            ],
             'name' => ['required', 'max:100'],
             'email' => ['required', 'max:255', 'email', Rule::unique('users')->ignore($this->user->id)],
             'roles' => ['sometimes', 'array'],
@@ -57,7 +58,6 @@ class UpdateUserRequest extends FormRequest
      * Handle a failed authorization attempt.
      *
      * @return void
-     *
      * @throws \Illuminate\Auth\Access\AuthorizationException
      */
     protected function failedAuthorization()

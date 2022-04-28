@@ -67,7 +67,6 @@ class UserController
     /**
      * @param  StoreUserRequest  $request
      * @return mixed
-     *
      * @throws \App\Exceptions\GeneralException
      * @throws \Throwable
      */
@@ -107,7 +106,6 @@ class UserController
      * @param  UpdateUserRequest  $request
      * @param  User  $user
      * @return mixed
-     *
      * @throws \Throwable
      */
     public function update(UpdateUserRequest $request, User $user)
@@ -121,7 +119,6 @@ class UserController
      * @param  DeleteUserRequest  $request
      * @param  User  $user
      * @return mixed
-     *
      * @throws \App\Exceptions\GeneralException
      */
     public function destroy(DeleteUserRequest $request, User $user)

@@ -36,7 +36,6 @@ class DeletedUserController
     /**
      * @param  User  $deletedUser
      * @return mixed
-     *
      * @throws \App\Exceptions\GeneralException
      */
     public function update(User $deletedUser)
@@ -49,7 +48,6 @@ class DeletedUserController
     /**
      * @param  User  $deletedUser
      * @return mixed
-     *
      * @throws \App\Exceptions\GeneralException
      */
     public function destroy(User $deletedUser)

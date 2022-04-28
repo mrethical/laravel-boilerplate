@@ -12,7 +12,7 @@ trait PermissionRelationship
      */
     public function parent()
     {
-        return $this->belongsTo(__CLASS__, 'parent_id')->with('parent');
+        return $this->belongsTo(self::class, 'parent_id')->with('parent');
     }
 
     /**
@@ -20,6 +20,6 @@ trait PermissionRelationship
      */
     public function children()
     {
-        return $this->hasMany(__CLASS__, 'parent_id')->with('children');
+        return $this->hasMany(self::class, 'parent_id')->with('children');
     }
 }

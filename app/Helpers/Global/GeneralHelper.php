@@ -20,7 +20,6 @@ if (! function_exists('carbon')) {
      *
      * @param $time
      * @return Carbon
-     *
      * @throws Exception
      */
     function carbon($time)

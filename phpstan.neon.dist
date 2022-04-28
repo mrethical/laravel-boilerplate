@@ -1,0 +1,15 @@
+includes:
+    - ./vendor/nunomaduro/larastan/extension.neon
+
+parameters:
+    paths:
+        - app
+        - database/factories
+        - tests
+    level: 1
+    ignoreErrors:
+        -
+            message: "#^Access to an undefined property App\\\\Domains\\\\Auth\\\\Models\\\\Role\\:\\:\\$name\\.$#"
+            count: 1
+            path: app/Domains/Auth/Models/Role.php
+    checkMissingIterableValueType: false

@@ -8,6 +8,7 @@
 /public/mix-manifest.json
 /storage/*.key
 /vendor
+/vendor-bin/**/vendor
 /.vscode
 *.sublime-project
 *.sublime-workspace

@@ -51,7 +51,7 @@ class UnusedPassword implements Rule
             }
         }
 
-        if (! $this->user || null === $this->user) {
+        if (! $this->user || $this->user === null) {
             return false;
         }
 

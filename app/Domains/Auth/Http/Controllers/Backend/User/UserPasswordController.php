@@ -42,7 +42,6 @@ class UserPasswordController
      * @param  UpdateUserPasswordRequest  $request
      * @param  User  $user
      * @return mixed
-     *
      * @throws \Throwable
      */
     public function update(UpdateUserPasswordRequest $request, User $user)

@@ -58,7 +58,6 @@ class RoleController
     /**
      * @param  StoreRoleRequest  $request
      * @return mixed
-     *
      * @throws \App\Exceptions\GeneralException
      * @throws \Throwable
      */
@@ -87,7 +86,6 @@ class RoleController
      * @param  UpdateRoleRequest  $request
      * @param  Role  $role
      * @return mixed
-     *
      * @throws \App\Exceptions\GeneralException
      * @throws \Throwable
      */
@@ -102,7 +100,6 @@ class RoleController
      * @param  DeleteRoleRequest  $request
      * @param  Role  $role
      * @return mixed
-     *
      * @throws \Exception
      */
     public function destroy(DeleteRoleRequest $request, Role $role)

@@ -28,7 +28,6 @@ class UpdatePasswordController
     /**
      * @param  UpdatePasswordRequest  $request
      * @return mixed
-     *
      * @throws \Throwable
      */
     public function update(UpdatePasswordRequest $request)

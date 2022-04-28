@@ -174,7 +174,6 @@ abstract class BaseService
      *
      * @param $id
      * @return bool|null
-     *
      * @throws \Exception
      */
     public function deleteById($id)

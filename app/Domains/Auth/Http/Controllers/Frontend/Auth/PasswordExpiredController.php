@@ -24,7 +24,6 @@ class PasswordExpiredController
      * @param  UpdatePasswordRequest  $request
      * @param  UserService  $userService
      * @return mixed
-     *
      * @throws \Throwable
      */
     public function update(UpdatePasswordRequest $request, UserService $userService)
