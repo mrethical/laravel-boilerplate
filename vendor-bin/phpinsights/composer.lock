@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9ccc3dbcb5418b6ec385017cb73a6ac8",
+    "content-hash": "ab92b772dbefc8b2b7b9fd784549c95d",
     "packages": [],
     "packages-dev": [
         {
@@ -848,6 +848,7 @@
                 "issues": "https://github.com/PHP-CS-Fixer/diff/issues",
                 "source": "https://github.com/PHP-CS-Fixer/diff/tree/v2.0.2"
             },
+            "abandoned": true,
             "time": "2020-10-14T08:32:19+00:00"
         },
         {
