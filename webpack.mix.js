@@ -1,3 +1,4 @@
+const ESLintPlugin = require('eslint-webpack-plugin');
 const mix = require('laravel-mix');
 
 /*
@@ -29,6 +30,9 @@ mix.setPublicPath('public')
     ])
     .sourceMaps();
 
+mix.webpackConfig({
+  plugins: [new ESLintPlugin()]
+});
 if (mix.inProduction()) {
     mix.version();
 } else {

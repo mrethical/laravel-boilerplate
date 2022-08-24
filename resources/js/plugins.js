@@ -1,3 +1,5 @@
+/* global Swal */
+
 /**
  * Place any jQuery/helper plugins in here.
  */
