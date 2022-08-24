@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="{{ htmlLang() }}" @langrtl dir="rtl" @endlangrtl>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,6 +17,7 @@
     <livewire:styles />
     @stack('after-styles')
 </head>
+
 <body>
     @include('includes.partials.read-only')
     @include('includes.partials.logged-in-as')
@@ -28,7 +30,8 @@
         <main>
             @yield('content')
         </main>
-    </div><!--app-->
+    </div>
+    <!--app-->
 
     @stack('before-scripts')
     <script src="{{ mix('js/manifest.js') }}"></script>
@@ -37,4 +40,5 @@
     <livewire:scripts />
     @stack('after-scripts')
 </body>
+
 </html>

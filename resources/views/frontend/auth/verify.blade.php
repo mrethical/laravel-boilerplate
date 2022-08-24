@@ -20,7 +20,10 @@
                         </x-forms.post>
                     </x-slot>
                 </x-frontend.card>
-            </div><!--col-md-8-->
-        </div><!--row-->
-    </div><!--container-->
+            </div>
+            <!--col-md-8-->
+        </div>
+        <!--row-->
+    </div>
+    <!--container-->
 @endsection

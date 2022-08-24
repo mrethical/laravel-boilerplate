@@ -10,14 +10,15 @@
         "production": "mix --production",
         "lint": "eslint ./resources/js --ext .vue,.js,.jsx,.cjs,.mjs --ignore-path .gitignore",
         "lint:fix": "eslint ./resources/js --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-        "format": "prettier --check ./resources/js ./resources/sass",
-        "format:fix": "prettier --write ./resources/js ./resources/sass"
+        "format": "prettier --check ./resources/**/*.blade.php ./resources/js ./resources/sass",
+        "format:fix": "prettier --write ./resources/**/*.blade.php ./resources/js ./resources/sass"
     },
     "devDependencies": {
         "@coreui/coreui": "^3.0.0",
         "@coreui/icons": "^1.0.1",
         "@fortawesome/fontawesome-free": "^5.12.1",
         "@popperjs/core": "^2.5.1",
+        "@shufo/prettier-plugin-blade": "^1.5.4",
         "@vue/eslint-config-prettier": "^7.0.0",
         "alpinejs": "^2.3.5",
         "axios": "^0.21.1",

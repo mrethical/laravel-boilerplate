@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="{{ htmlLang() }}" @langrtl dir="rtl" @endlangrtl>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,6 +15,7 @@
     <livewire:styles />
     @stack('after-styles')
 </head>
+
 <body class="c-app">
     @include('backend.includes.sidebar')
 
@@ -29,13 +31,17 @@
                     <div class="fade-in">
                         @include('includes.partials.messages')
                         @yield('content')
-                    </div><!--fade-in-->
-                </div><!--container-fluid-->
+                    </div>
+                    <!--fade-in-->
+                </div>
+                <!--container-fluid-->
             </main>
-        </div><!--c-body-->
+        </div>
+        <!--c-body-->
 
         @include('backend.includes.footer')
-    </div><!--c-wrapper-->
+    </div>
+    <!--c-wrapper-->
 
     @stack('before-scripts')
     <script src="{{ mix('js/manifest.js') }}"></script>
@@ -44,4 +50,5 @@
     <livewire:scripts />
     @stack('after-scripts')
 </body>
+
 </html>

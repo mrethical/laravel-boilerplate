@@ -16,7 +16,7 @@
             </x-slot>
 
             <x-slot name="body">
-                <div x-data="{userType : '{{ $model::TYPE_USER }}'}">
+                <div x-data="{ userType: '{{ $model::TYPE_USER }}' }">
                     <div class="form-group row">
                         <label for="name" class="col-md-2 col-form-label">@lang('Type')</label>
 
@@ -26,13 +26,15 @@
                                 <option value="{{ $model::TYPE_ADMIN }}">@lang('Administrator')</option>
                             </select>
                         </div>
-                    </div><!--form-group-->
+                    </div>
+                    <!--form-group-->
 
                     <div class="form-group row">
                         <label for="name" class="col-md-2 col-form-label">@lang('Name')</label>
 
                         <div class="col-md-10">
-                            <input type="text" name="name" class="form-control" placeholder="{{ __('Name') }}" value="{{ old('name') }}" maxlength="100" required />
+                            <input type="text" name="name" class="form-control" placeholder="{{ __('Name') }}"
+                                value="{{ old('name') }}" maxlength="100" required />
                         </div>
                     </div>
 

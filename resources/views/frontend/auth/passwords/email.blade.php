@@ -17,19 +17,26 @@
                                 <label for="email" class="col-md-4 col-form-label text-md-right">@lang('E-mail Address')</label>
 
                                 <div class="col-md-6">
-                                    <input type="email" name="email" id="email" class="form-control" value="{{ old('email') }}" placeholder="{{ __('E-mail Address') }}" maxlength="255" required autofocus autocomplete="email" />
+                                    <input type="email" name="email" id="email" class="form-control"
+                                        value="{{ old('email') }}" placeholder="{{ __('E-mail Address') }}" maxlength="255"
+                                        required autofocus autocomplete="email" />
                                 </div>
-                            </div><!--form-group-->
+                            </div>
+                            <!--form-group-->
 
                             <div class="form-group row mb-0">
                                 <div class="col-md-6 offset-md-4">
                                     <button class="btn btn-primary" type="submit">@lang('Send Password Reset Link')</button>
                                 </div>
-                            </div><!--form-group-->
+                            </div>
+                            <!--form-group-->
                         </x-forms.post>
                     </x-slot>
                 </x-frontend.card>
-            </div><!--col-md-8-->
-        </div><!--row-->
-    </div><!--container-->
+            </div>
+            <!--col-md-8-->
+        </div>
+        <!--row-->
+    </div>
+    <!--container-->
 @endsection

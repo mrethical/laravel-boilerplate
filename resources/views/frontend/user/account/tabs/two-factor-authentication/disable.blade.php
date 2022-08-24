@@ -19,15 +19,20 @@
                                 <label for="code" class="col-md-4 col-form-label text-md-right">@lang('Authorization Code')</label>
 
                                 <div class="col-md-6">
-                                    <input type="text" name="code" id="code" maxlength="10" class="form-control" placeholder="{{ __('Authorization Code') }}" required />
+                                    <input type="text" name="code" id="code" maxlength="10" class="form-control"
+                                        placeholder="{{ __('Authorization Code') }}" required />
                                 </div>
-                            </div><!--form-group-->
+                            </div>
+                            <!--form-group-->
 
                             <button class="btn btn-sm btn-block btn-danger" type="submit">@lang('Remove Two Factor Authentication')</button>
                         </x-forms.delete>
                     </x-slot>
                 </x-frontend.card>
-            </div><!--col-md-8-->
-        </div><!--row-->
-    </div><!--container-->
+            </div>
+            <!--col-md-8-->
+        </div>
+        <!--row-->
+    </div>
+    <!--container-->
 @endsection

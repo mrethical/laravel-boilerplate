@@ -1,18 +1,15 @@
 @forelse($roles->where('type', $type) as $role)
     <div class="mb-2">
         <div class="form-check">
-            <input
-                name="roles[]"
-                id="role_{{ $role->id }}"
-                value="{{ $role->id }}"
-                class="form-check-input"
+            <input name="roles[]" id="role_{{ $role->id }}" value="{{ $role->id }}" class="form-check-input"
                 type="checkbox"
                 {{ (old('rules') && in_array($role->id, old('rules'), true)) || (isset($user) && in_array($role->id, $user->roles->modelKeys(), true)) ? 'checked' : '' }} />
 
             <label class="form-check-label" for="role_{{ $role->id }}">
                 {{ $role->name }}
             </label>
-        </div><!--form-check-->
+        </div>
+        <!--form-check-->
     </div>
 
     @if ($role->isAdmin())
@@ -23,7 +20,7 @@
         @if ($role->permissions->count())
             <blockquote class="ml-3">
                 @foreach ($role->permissions as $permission)
-                    <i class="fa fa-check-circle"></i> {{ $permission->description }}<br/>
+                    <i class="fa fa-check-circle"></i> {{ $permission->description }}<br />
                 @endforeach
             </blockquote>
         @else
