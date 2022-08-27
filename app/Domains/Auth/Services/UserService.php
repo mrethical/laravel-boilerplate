@@ -47,6 +47,7 @@ class UserService extends BaseService
     /**
      * @param  array  $data
      * @return mixed
+     *
      * @throws GeneralException
      */
     public function registerUser(array $data = []): User
@@ -70,6 +71,7 @@ class UserService extends BaseService
      * @param $info
      * @param $provider
      * @return mixed
+     *
      * @throws GeneralException
      */
     public function registerProvider($info, $provider): User
@@ -102,6 +104,7 @@ class UserService extends BaseService
     /**
      * @param  array  $data
      * @return User
+     *
      * @throws GeneralException
      * @throws \Throwable
      */
@@ -146,6 +149,7 @@ class UserService extends BaseService
      * @param  User  $user
      * @param  array  $data
      * @return User
+     *
      * @throws \Throwable
      */
     public function update(User $user, array $data = []): User
@@ -204,6 +208,7 @@ class UserService extends BaseService
      * @param $data
      * @param  bool  $expired
      * @return User
+     *
      * @throws \Throwable
      */
     public function updatePassword(User $user, $data, $expired = false): User
@@ -229,6 +234,7 @@ class UserService extends BaseService
      * @param  User  $user
      * @param $status
      * @return User
+     *
      * @throws GeneralException
      */
     public function mark(User $user, $status): User
@@ -255,6 +261,7 @@ class UserService extends BaseService
     /**
      * @param  User  $user
      * @return User
+     *
      * @throws GeneralException
      */
     public function delete(User $user): User
@@ -275,6 +282,7 @@ class UserService extends BaseService
     /**
      * @param  User  $user
      * @return User
+     *
      * @throws GeneralException
      */
     public function restore(User $user): User
@@ -291,6 +299,7 @@ class UserService extends BaseService
     /**
      * @param  User  $user
      * @return bool
+     *
      * @throws GeneralException
      */
     public function destroy(User $user): bool

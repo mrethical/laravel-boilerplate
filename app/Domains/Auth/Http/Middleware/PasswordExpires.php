@@ -14,6 +14,7 @@ class PasswordExpires
      * @param $request
      * @param  Closure  $next
      * @return \Illuminate\Http\RedirectResponse|mixed
+     *
      * @throws \Exception
      */
     public function handle($request, Closure $next)

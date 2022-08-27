@@ -55,8 +55,8 @@ jobs:
       - name: Generate Key
         run: php artisan key:generate
 
-      - name: PHP-CS-Fixer
-        run: vendor/bin/php-cs-fixer fix --verbose --diff --dry-run --stop-on-violation --using-cache=no
+      - name: Pint
+        run: vendor/bin/pint --test
 
       - name: PHPStan
         run: vendor/bin/phpstan analyse --configuration=phpstan.neon.dist --memory-limit=512M

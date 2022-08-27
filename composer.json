@@ -95,7 +95,7 @@
         "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
         "bin": "echo 'bin not installed'",
         "analyse": "vendor/bin/phpstan analyse",
-        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes",
+        "format": "vendor/bin/pint",
         "insights": "vendor/bin/phpinsights"
     },
     "extra": {

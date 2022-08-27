@@ -89,6 +89,7 @@ class RegisterController
      *
      * @param  array  $data
      * @return \App\Domains\Auth\Models\User|mixed
+     *
      * @throws \App\Domains\Auth\Exceptions\RegisterException
      */
     protected function create(array $data)

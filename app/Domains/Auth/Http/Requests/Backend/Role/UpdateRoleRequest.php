@@ -51,6 +51,7 @@ class UpdateRoleRequest extends FormRequest
      * Handle a failed authorization attempt.
      *
      * @return void
+     *
      * @throws \Illuminate\Auth\Access\AuthorizationException
      */
     protected function failedAuthorization()
