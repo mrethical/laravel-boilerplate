@@ -14,6 +14,8 @@
         "format:fix": "prettier --write ./resources/**/*.blade.php ./resources/js ./resources/sass"
     },
     "devDependencies": {
+        "@commitlint/cli": "^17.4.2",
+        "@commitlint/config-conventional": "^17.4.2",
         "@coreui/coreui": "^3.0.0",
         "@coreui/icons": "^1.0.1",
         "@fortawesome/fontawesome-free": "^5.12.1",
@@ -27,6 +29,7 @@
         "eslint": "^8.22.0",
         "eslint-plugin-vue": "^9.4.0",
         "eslint-webpack-plugin": "^3.2.0",
+        "husky": "^8.0.3",
         "jquery": "^3.5.1",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
