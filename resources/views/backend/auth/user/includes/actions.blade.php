@@ -37,14 +37,15 @@
                     permission="admin.access.user.change-password" />
             </div>
         </div>
-    @elseif (!$user->isMasterAdmin() && // This is not the master admin
-    $user->isActive() && // The account is active
-    $user->id !== $logged_in_user->id && // It's not the person logged in
-        // Any they have at lease one of the abilities in this dropdown
-        ($logged_in_user->can('admin.access.user.change-password') ||
-            $logged_in_user->can('admin.access.user.clear-session') ||
-            $logged_in_user->can('admin.access.user.impersonate') ||
-            $logged_in_user->can('admin.access.user.deactivate')))
+    @elseif (
+        !$user->isMasterAdmin() && // This is not the master admin
+        $user->isActive() && // The account is active
+        $user->id !== $logged_in_user->id && // It's not the person logged in
+            // Any they have at lease one of the abilities in this dropdown
+            ($logged_in_user->can('admin.access.user.change-password') ||
+                $logged_in_user->can('admin.access.user.clear-session') ||
+                $logged_in_user->can('admin.access.user.impersonate') ||
+                $logged_in_user->can('admin.access.user.deactivate')))
         <div class="dropdown d-inline-block">
             <a class="btn btn-sm btn-secondary dropdown-toggle" id="moreMenuLink" href="#" role="button"
                 data-toggle="dropdown" data-boundary="window" aria-haspopup="true" aria-expanded="false">
