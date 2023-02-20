@@ -8,7 +8,6 @@
 /public/mix-manifest.json
 /storage/*.key
 /vendor
-/vendor-bin/**/vendor
 /.vscode
 *.sublime-project
 *.sublime-workspace
@@ -17,7 +16,6 @@ _ide_helper.php
 .env
 .env.backup
 .idea
-.php_cs.cache
 .phpunit.result.cache
 .phpstorm.meta.php
 .project
