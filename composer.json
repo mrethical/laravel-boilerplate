@@ -30,17 +30,17 @@
         "tabuna/breadcrumbs": "^2.2"
     },
     "require-dev": {
-        "bamarni/composer-bin-plugin": "^1.5",
         "barryvdh/laravel-debugbar": "^3.2",
         "barryvdh/laravel-ide-helper": "^2.6",
         "brianium/paratest": "^6.2",
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
         "laravel/pint": "^1.4",
-        "laravel/sail": "^1.14",
+        "laravel/sail": "^1.0.1",
         "mockery/mockery": "^1.4.2",
         "nunomaduro/collision": "^5.0",
         "nunomaduro/larastan": "^1.0",
+        "nunomaduro/phpinsights": "^2.2",
         "phpunit/phpunit": "^9.3.3",
         "roave/security-advisories": "dev-master"
     },
@@ -61,14 +61,10 @@
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
         ],
-        "post-install-cmd": [
-            "@composer bin all install --ansi"
-        ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi",
             "@php artisan ide-helper:generate",
-            "@php artisan ide-helper:meta",
-            "@composer bin all update --ansi"
+            "@php artisan ide-helper:meta"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
@@ -97,7 +93,7 @@
         "bin": "echo 'bin not installed'",
         "analyse": "vendor/bin/phpstan analyse",
         "format": "vendor/bin/pint",
-        "insights": "vendor/bin/phpinsights"
+        "insights": "@php artisan insights"
     },
     "extra": {
         "laravel": {
@@ -109,9 +105,8 @@
         "preferred-install": "dist",
         "sort-packages": true,
         "allow-plugins": {
-            "bamarni/composer-bin-plugin": true,
-            "treeware/plant": true,
-            "pixelfear/composer-dist-plugin": true
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "treeware/plant": true
         }
     },
     "minimum-stability": "dev",

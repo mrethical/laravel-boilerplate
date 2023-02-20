@@ -71,7 +71,7 @@ jobs:
         run: vendor/bin/phpstan analyse --configuration=phpstan.neon.dist --memory-limit=512M
 
       - name: PHPInsights
-        run: vendor/bin/phpinsights --no-interaction --min-quality=90 --min-complexity=80 --min-architecture=85 --min-style=95
+        run: php artisan insights --no-interaction --min-quality=90 --min-complexity=80 --min-architecture=85 --min-style=95
 
       - name: Execute tests
         run: vendor/bin/phpunit

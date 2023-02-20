@@ -4,8 +4,6 @@ if (! function_exists('includeFilesInFolder')) {
     /**
      * Loops through a folder and requires all PHP files
      * Searches sub-directories as well.
-     *
-     * @param $folder
      */
     function includeFilesInFolder($folder)
     {
@@ -27,9 +25,6 @@ if (! function_exists('includeFilesInFolder')) {
 }
 
 if (! function_exists('includeRouteFiles')) {
-    /**
-     * @param $folder
-     */
     function includeRouteFiles($folder)
     {
         includeFilesInFolder($folder);
