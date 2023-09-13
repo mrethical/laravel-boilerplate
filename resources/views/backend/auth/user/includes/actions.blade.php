@@ -39,8 +39,8 @@
         </div>
     @elseif (
         !$user->isMasterAdmin() && // This is not the master admin
-        $user->isActive() && // The account is active
-        $user->id !== $logged_in_user->id && // It's not the person logged in
+            $user->isActive() && // The account is active
+            $user->id !== $logged_in_user->id && // It's not the person logged in
             // Any they have at lease one of the abilities in this dropdown
             ($logged_in_user->can('admin.access.user.change-password') ||
                 $logged_in_user->can('admin.access.user.clear-session') ||

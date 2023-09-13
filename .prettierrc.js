@@ -1,8 +1,8 @@
 module.exports = {
   semi: false,
-  trailingComma: "all",
   singleQuote: true,
   tabWidth: 2,
+  plugins: ["@shufo/prettier-plugin-blade"],
   overrides: [
     {
       "files": ["*.blade.php"],

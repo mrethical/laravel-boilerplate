@@ -8,6 +8,7 @@ use NunoMaduro\PhpInsights\Domain\Insights\ForbiddenNormalClasses;
 use NunoMaduro\PhpInsights\Domain\Insights\ForbiddenPrivateMethods;
 use NunoMaduro\PhpInsights\Domain\Insights\ForbiddenTraits;
 use NunoMaduro\PhpInsights\Domain\Metrics\Architecture\Classes;
+use PhpCsFixer\Fixer\Comment\NoEmptyCommentFixer;
 use SlevomatCodingStandard\Sniffs\Commenting\DocCommentSpacingSniff;
 use SlevomatCodingStandard\Sniffs\Commenting\UselessFunctionDocCommentSniff;
 use SlevomatCodingStandard\Sniffs\ControlStructures\DisallowEmptySniff;
@@ -89,6 +90,7 @@ return [
         ForbiddenDefineFunctions::class,
         ForbiddenNormalClasses::class,
         ForbiddenTraits::class,
+        NoEmptyCommentFixer::class,
         ParameterTypeHintSniff::class,
         PropertyTypeHintSniff::class,
         ReturnTypeHintSniff::class,
