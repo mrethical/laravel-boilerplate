@@ -1,5 +1,5 @@
 {
-    "privatyarne": true,
+    "private": true,
     "scripts": {
         "dev": "npm run development",
         "development": "mix",
