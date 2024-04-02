@@ -1,6 +1,7 @@
 {
     "private": true,
     "scripts": {
+        "prepare": "husky",
         "dev": "npm run development",
         "development": "mix",
         "watch": "mix watch",
@@ -14,14 +15,14 @@
         "format:fix": "prettier --write ./resources/**/*.blade.php ./resources/js ./resources/sass"
     },
     "devDependencies": {
-        "@commitlint/cli": "^17.4.2",
-        "@commitlint/config-conventional": "^17.4.2",
+        "@commitlint/cli": "^19.2.1",
+        "@commitlint/config-conventional": "^19.1.0",
         "@coreui/coreui": "^3.0.0",
         "@coreui/icons": "^1.0.1",
         "@fortawesome/fontawesome-free": "^5.12.1",
         "@popperjs/core": "^2.5.1",
         "@shufo/prettier-plugin-blade": "^1.5.4",
-        "@vue/eslint-config-prettier": "^8.0.0",
+        "@vue/eslint-config-prettier": "^9.0.0",
         "alpinejs": "^2.3.5",
         "axios": "^0.21.1",
         "bootstrap": "^4.5.0",
@@ -29,7 +30,7 @@
         "eslint": "^8.22.0",
         "eslint-plugin-vue": "^9.4.0",
         "eslint-webpack-plugin": "^4.0.0",
-        "husky": "^8.0.3",
+        "husky": "^9.0.11",
         "jquery": "^3.5.1",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
@@ -44,6 +45,5 @@
         "vue": "^2.5.17",
         "vue-loader": "^15.9.5",
         "vue-template-compiler": "^2.6.10"
-    },
-    "dependencies": {}
+    }
 }

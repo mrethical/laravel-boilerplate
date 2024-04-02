@@ -14,8 +14,8 @@
     @endif
 
     @if (!$user->isActive())
-        <x-utils.form-button :action="route('admin.auth.user.mark', [$user, 1])" method="patch" button-class="btn btn-primary btn-sm"
-            icon="fas fa-sync-alt" name="confirm-item" permission="admin.access.user.reactivate">
+        <x-utils.form-button :action="route('admin.auth.user.mark', [$user, 1])" method="patch" button-class="btn btn-primary btn-sm" icon="fas fa-sync-alt"
+            name="confirm-item" permission="admin.access.user.reactivate">
             @lang('Reactivate')
         </x-utils.form-button>
     @endif
